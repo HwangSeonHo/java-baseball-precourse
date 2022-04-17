@@ -13,10 +13,6 @@ public enum Manager {
     private int strike;
     private int ball;
 
-    public boolean isIs_playing() {
-        return is_playing;
-    }
-
     public boolean isIs_endPhase() {
         return is_endPhase;
     }
