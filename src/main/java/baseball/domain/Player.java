@@ -5,6 +5,11 @@ public class Player {
     private String player_name;
     private int[] player_card;
 
+    public Player(String player_name, int[] player_card) {
+        this.player_name = player_name;
+        this.player_card = player_card;
+    }
+
     public String getPlayer_name() {
         return player_name;
     }

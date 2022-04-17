@@ -2,14 +2,48 @@ package baseball.domain;
 
 public enum Manager {
 
-    RESUME,
-    END;
+    INSTANCE;
 
     private int total_game_round;
     private boolean is_playing;
+    private boolean is_endPhase;
     private int phase;
     private Player opponent;
     private Player challenger;
+    private int strike;
+    private int ball;
+
+    public boolean isIs_playing() {
+        return is_playing;
+    }
+
+    public boolean isIs_endPhase() {
+        return is_endPhase;
+    }
+
+    public void setIs_endPhase(boolean is_endPhase) {
+        this.is_endPhase = is_endPhase;
+    }
+
+    public int getStrike() {
+        return strike;
+    }
+
+    public void setStrike(int strike) {
+        this.strike = strike;
+    }
+
+    public int getBall() {
+        return ball;
+    }
+
+    public void setBall(int ball) {
+        this.ball = ball;
+    }
+
+    public static Manager getInstance() {
+        return INSTANCE;
+    }
 
     public int getTotal_game_round() {
         return total_game_round;
@@ -19,7 +53,7 @@ public enum Manager {
         this.total_game_round = total_game_round;
     }
 
-    public boolean isIs_playing() {
+    public boolean is_playing() {
         return is_playing;
     }
 
