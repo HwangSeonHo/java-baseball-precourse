@@ -1,7 +1,6 @@
 package baseball.service;
 
 import baseball.domain.Manager;
-import baseball.domain.Player;
 import camp.nextstep.edu.missionutils.Console;
 
 public class GameService {
@@ -77,8 +76,8 @@ public class GameService {
             throw new IllegalArgumentException();
         }
 
-        if(input.charAt(0) == '1')
-            this.manager.setIs_endPhase(false);
+        if(input.charAt(0) == '2')
+            this.manager.setIs_endPhase(true);
     }
 
 }

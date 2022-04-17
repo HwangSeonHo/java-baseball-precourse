@@ -13,14 +13,16 @@ public class BaseballController {
         gameRoop();
     }
 
-    private void gameRoop() {
+    private void gameRoop() throws IllegalArgumentException {
         settingService.initializeManager();
         settingService.initializeChallenger("User", 3);
         gameService.play();
         gameService.printResult();
 
-        if(!gameService.isEndPhase())
+        if(!gameService.isEndPhase()) {
             gameRoop();
+            return;
+        }
 
         gameService.askRetry();
 
@@ -30,7 +32,7 @@ public class BaseballController {
         }
     }
 
-    public void initialize() {
+    public void initialize() throws IllegalArgumentException {
         settingService.initializeManager();
         settingService.initializeOpponent("Computer", 3);
         settingService.increaseTotalGameRound();

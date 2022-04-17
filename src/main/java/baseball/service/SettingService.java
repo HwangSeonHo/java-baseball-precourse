@@ -24,6 +24,14 @@ public class SettingService {
         this.manager.setOpponent(new Player(name, getRandomNumberByRange(range)));
     }
 
+    public Player getOpponent() {
+        return this.manager.getOpponent();
+    }
+
+    public void setOpponent(int[] test_input) {
+        this.manager.setOpponent(new Player("tester", test_input));
+    }
+
     public void initializeChallenger(String name, int range) throws IllegalArgumentException {
 
         System.out.print("숫자를 입력해 주세요 : ");
